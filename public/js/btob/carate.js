@@ -60,9 +60,10 @@
                 }
             });
         },
+
         getItems: () => {
             $.ajax({
-                url: 'http://127.0.0.1:8000/btob/item/getItems',
+                url: APP_URL+'/btob/item/getItems',
                 type: "POST",
                 data : {
                     "_token": $('#csrf-token')[0].content,  //pass the CSRF_TOKEN()

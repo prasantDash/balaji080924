@@ -78,5 +78,8 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    var APP_URL = {!!json_encode(url('/')) !!}
+</script>
 <script src="{{ asset('js/btob/carate.js')}}"></script>
 @stop
