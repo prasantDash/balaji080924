@@ -13,7 +13,6 @@
                     "offsetData" :itencarate.offsetData
                 },
                 success: function(data){
-                    console.log(data);
                     let responceData = data.data, createdDate = '',dateData;
                     let tableData = "";
                     responceData.map((a) => {
