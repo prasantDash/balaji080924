@@ -31,43 +31,44 @@ BtoB Purches
         </form>
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-sm-12">
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+        <div style="overflow: scroll;">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            <br>
+            <table class="table table-bordered" id="">
+                <thead>
+                    <tr>
+                        <th>Sl no</th>
+                        <th>Amount</th>
+                        <th>Product</th>
+                        <th>Item</th>
+                        <th>Weight</th>
+                        <th>Less</th>
+                        <th>Net Weight</th>
+                        <th>Tunch</th>
+                        <th>Labour</th>
+                        <th>Fluee</th>
+                        <th>Grand total</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+            </table>
         </div>
-        @endif
-        <br>
-        <table class="table table-bordered" id="">
-            <thead>
-                <tr>
-                    <th>Sl no</th>
-                    <th>Amount</th>
-                    <th>Product</th>
-                    <th>Item</th>
-                    <th>Weight</th>
-                    <th>Less</th>
-                    <th>Net Weight</th>
-                    <th>Tunch</th>
-                    <th>Labour</th>
-                    <th>Fluee</th>
-                    <th>Grand total</th>
-                    <th class="text-center">Action</th>
-                </tr>
-            </thead>
-            <tbody id="items"></tbody>
-        </table>
-
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-sm-12 text-right">
         <ul class="pagination justify-content-end" id="carate-pagination"></ul>
     </div>
 </div>
 <script type="text/javascript">
-    var APP_URL = {!!json_encode(url('/')) !!}
+var APP_URL = {!!json_encode(url('/')) !!}
 </script>
 <script src="{{ asset('js/btob/purches.js')}}"></script>
 @stop
