@@ -71,6 +71,7 @@
                     "offsetData" :0
                 },
                 success: function(data){
+                    console.log(data);
                     let items = '';
                     data.data.map((a)=>{
                         items += '<option value="'+a.id+'">'+a.itemname+'</option>';
