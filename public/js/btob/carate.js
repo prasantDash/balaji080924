@@ -5,7 +5,7 @@
         maxPageoffset:0,               
         getItemCrate: () => {
             $.ajax({
-                url: 'http://127.0.0.1:8000/btob/item/fetchCarateItems',
+                url: APP_URL+'/btob/item/fetchCarateItems',
                 type: "POST",
                 data : {
                     "_token"     : $('#csrf-token')[0].content,
